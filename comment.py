@@ -7,6 +7,9 @@ class Comment():
         self.comment_text = input("enter your comment text >>> ")
         self.datetime = datetime.datetime.now()
 
+    def introduce(self):
+        print(f"""{self.comment_text}\n
+comment time: {self.datetime}""")
 class Comment_DB(Comment):
 
     def save_to_db(self):
@@ -21,6 +24,3 @@ class Comment_DB(Comment):
 
         conn.commit()
         conn.close()
-
-comment = Comment_DB()
-comment.save_to_db()

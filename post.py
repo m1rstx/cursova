@@ -8,10 +8,10 @@ class Post():
         self.text = input("enter your post text >>> ")
         self.datetime = datetime.datetime.now()
 
-#     def introduce(self):
-#         print(f"""      {self.title}
-# {self.text}\n
-# post time: {self.datetime}""")
+    def introduce(self):
+        print(f"""      {self.title}
+{self.text}\n
+post time: {self.datetime}""")
 
 class Post_DB(Post):
 
@@ -28,5 +28,3 @@ class Post_DB(Post):
         conn.commit()
         conn.close()
 
-post_db = Post_DB()
-post_db.save_to_db()

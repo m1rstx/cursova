@@ -34,5 +34,4 @@ class Reg_DB(Registration):
         conn.commit()
         conn.close()
 
-reg = Reg_DB()
-reg.save_to_db()
+
