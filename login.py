@@ -8,7 +8,12 @@ class Login():
     def get_password (self):
         return self.__password
     
+
 class Check_DB_log(Login):
+
+    def __init__(self):
+        super().__init__()
+        self.is_authenticated = False
     
     def check_user_exists(self):
 
@@ -20,5 +25,8 @@ class Check_DB_log(Login):
         user = cursor.fetchone()
 
         conn.close()
-        return user is not None
-    
+        
+        if user:
+            self.is_authenticated = True
+        else:
+            print(f"incorrect user name or password.")
