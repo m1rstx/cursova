@@ -21,6 +21,10 @@ jobs:
         with:
           python-version: '3.13'
 
+      - name: Clear GitHub Actions cache
+        run: |
+          sudo rm -rf /home/runner/work/_actions
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -34,6 +38,4 @@ jobs:
         run: |
           black --check .
 
-      - name: Clear GitHub Actions cache
-        run: |
-          sudo rm -rf /home/runner/work/_actions
+      
