@@ -21,9 +21,15 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Clear GitHub Actions cache
+      # Шаг для проверки структуры директорий и наличия файла requirements.txt
+      - name: Verify files in directory
         run: |
-          sudo rm -rf /home/runner/work/_actions
+          echo "Current directory:"
+          pwd
+          echo "Listing files:"
+          ls -la
+          echo "Listing files recursively:"
+          ls -R
 
       - name: Install dependencies
         run: |
@@ -37,5 +43,3 @@ jobs:
       - name: Run black
         run: |
           black --check .
-
-      
