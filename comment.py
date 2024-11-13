@@ -19,7 +19,7 @@ class Comment_DB(Comment):
 
         cursor.execute('''
         INSERT INTO Comments (text, date)
-        VALUES (?, ?)        
+        VALUES (?, ?)
         ''', (self.comment_text, date_str))
 
         conn.commit()

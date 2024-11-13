@@ -29,4 +29,4 @@ class Check_DB_log(Login):
         if user:
             self.is_authenticated = True
         else:
-            print(f"incorrect user name or password.")
+            print("incorrect user name or password.")

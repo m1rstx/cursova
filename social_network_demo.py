@@ -25,7 +25,7 @@ def user_create_comment():
 
 
 def sn_choice():
-    option = int(input(f"1 - sign in \n2 - sign up \n>>> "))
+    option = int(input("1 - sign in \n2 - sign up \n>>> "))
 
     if option == 1:
         is_autenticated = user_sign_in()
@@ -40,7 +40,7 @@ def sn_choice():
         print("incorrect value")
     
 def main_program():
-    user_option = int(input(f"1 - create post \n2 - watch all post \n>>> "))
+    user_option = int(input("1 - create post \n2 - watch all post \n>>> "))
 
     if user_option == 1:
         user_create_post()

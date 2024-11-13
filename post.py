@@ -2,7 +2,7 @@ import sqlite3
 import datetime
 
 class Post():
-    
+
     def __init__ (self):
         self.title = input("enter title for post >>> ")
         self.text = input("enter your post text >>> ")
@@ -22,9 +22,8 @@ class Post_DB(Post):
 
         cursor.execute('''
         INSERT INTO Post (title, text, date)
-        VALUES (?, ?, ?)        
+        VALUES (?, ?, ?)
         ''', (self.title, self.text, date_str))
 
         conn.commit()
         conn.close()
-
