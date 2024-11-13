@@ -1,7 +1,7 @@
-from login import *
-from registration import *
-from post import *
-from comment import *
+from login import Check_DB_log
+from registration import Reg_DB
+from post import Post_DB
+from comment import Comment_DB
 
 def user_sign_in():
     user_log = Check_DB_log()
