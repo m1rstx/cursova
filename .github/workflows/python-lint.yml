@@ -14,22 +14,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.13'
-
-      # Шаг для проверки структуры директорий и наличия файла requirements.txt
-      - name: Verify files in directory
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Listing files:"
-          ls -la
-          echo "Listing files recursively:"
-          ls -R
 
       - name: Install dependencies
         run: |
