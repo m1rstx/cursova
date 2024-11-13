@@ -23,15 +23,12 @@ class Reg_DB(Registration):
 
         cursor.execute('''
         INSERT INTO Users (user_name, first_name, last_name, email, password)
-        VALUES (?, ?, ?, ?, ?)        
-        ''', (self.user_name,
+        VALUES (?, ?, ?, ?, ?)
+        ''',(self.user_name,
                 self.first_name,
                 self.last_name,
                 self.get_email(),
-                self.get_password())
-        )
+                self.get_password()))
 
         conn.commit()
         conn.close()
-
-
