@@ -9,7 +9,7 @@ class Login():
         return self.__password
     
 
-class Check_DB_log(Login):
+class Check_DB_log(Login): #перевірка бд на наявність коримтувача з підтвердженням
 
     def __init__(self):
         super().__init__()

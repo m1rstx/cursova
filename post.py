@@ -1,19 +1,19 @@
 import sqlite3 
 import datetime
 
-class Post():
+class Post(): 
 
     def __init__ (self):
         self.title = input("enter title for post >>> ")
         self.text = input("enter your post text >>> ")
-        self.datetime = datetime.datetime.now()
+        self.datetime = datetime.date.today()
 
     def introduce(self):
-        print(f"""      {self.title}
-{self.text}\n
-post time: {self.datetime}""")
+        print(f"""\nTitle: {self.title}
+Text: {self.text}\n
+Date: {self.datetime}""")
 
-class Post_DB(Post):
+class Post_DB(Post): #запис посту у бд 
 
     def save_to_db(self):
         conn = sqlite3.connect('social_network.db')

@@ -8,9 +8,9 @@ class Comment():
         self.datetime = datetime.datetime.now()
 
     def introduce(self):
-        print(f"""{self.comment_text}\n
+        print(f"""comment text: {self.comment_text}\n
 comment time: {self.datetime}""")
-class Comment_DB(Comment):
+class Comment_DB(Comment): # запис коменту в бд 
 
     def save_to_db(self):
         conn = sqlite3.connect('social_network.db')

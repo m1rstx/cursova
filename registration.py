@@ -15,7 +15,7 @@ class Registration():
     def get_password (self):
         return self.__password
 
-class Reg_DB(Registration):
+class Reg_DB(Registration): # запис користувача до бд 
 
     def save_to_db(self):
         conn = sqlite3.connect('social_network.db')
