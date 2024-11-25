@@ -21,9 +21,9 @@ cursor.execute('''
 CREATE TABLE IF NOT EXISTS Post (
     post_id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER,
+    creator VARCHAR(20),
     title TEXT,
     text TEXT,
-    like_counter INTEGER,
     date TEXT,
     FOREIGN KEY (user_id) REFERENCES User(user_id)
 )
@@ -40,16 +40,6 @@ CREATE TABLE IF NOT EXISTS Comments (
 )
 ''')
 
-# Створення таблиці SocialNetwork
-cursor.execute('''
-CREATE TABLE IF NOT EXISTS SocialNetwork (
-    socialnetwork_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_id INTEGER,
-    post_id INTEGER,
-    FOREIGN KEY (user_id) REFERENCES User(user_id),
-    FOREIGN KEY (post_id) REFERENCES User(post_id)
-)
-''')
 
 # Збереження змін та закриття з'єднання
 conn.commit()
